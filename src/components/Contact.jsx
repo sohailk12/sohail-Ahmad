@@ -5,7 +5,7 @@ import { IoLogoYoutube } from "react-icons/io5";
 import { delay, motion } from 'framer-motion';
 
 export const Contact = () => {
-  return <section className='border-b-2 border-solid border-slate-200 ml-5 md:ml-56 mr-5 flex flex-col flex-wrap justify-center items-center lg:mb-35 pb-24 pt-32' id='contact'>
+  return <section className='border-b-2 border-solid border-slate-200 ml-5 lg:ml-56 mr-5 flex flex-col flex-wrap justify-center items-center lg:mb-35 pb-24 pt-32' id='contact'>
     <div className='flex flex-col items-center justify-center'>
       <motion.h1
       whileInView={{x:0,opacity:1,rotate:360}}

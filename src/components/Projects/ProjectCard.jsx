@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export const ProjectCard = ({project :{title,imageSrc ,description,skills,demo,source}}) => {
   const [toggleImage, setToggleImage] = useState(false);
   console.log(toggleImage)
-  return <div className='flex flex-row flex-wrap items-center justify-center gap-x-32 shadow-lg rounded-lg'>
+  return <div className='flex flex-row flex-wrap items-center justify-center overflow-hidden gap-x-32 shadow-lg rounded-lg'>
     <motion.div 
     whileInView={{opacity:1, x:0}}
     initial={{opacity:0, x:-100}}

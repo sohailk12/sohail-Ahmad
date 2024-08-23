@@ -19,10 +19,10 @@ const iconVariants=(duration)=>({
     }
 })
 export const Experience = () => {
-  return <section className='border-b-2 border-solid border-slate-200 ml-5 md:ml-56 mr-5 flex flex-col flex-wrap lg:mb-35 pt-5 md:pt-28 pb-40' id='skills'> 
+  return <section className='border-b-2 border-solid border-slate-200 ml-5 lg:ml-56 mr-5 flex flex-col flex-wrap lg:mb-35 pt-5 md:pt-28 pb-40' id='skills'> 
     <motion.h2
     whileInView={{opacity:1, y:0}}
-    initial={{opacity:0, y:-100}}
+    initial={{opacity:0, y:-50}}
     transition={{duration:1.5}}
     className='text-center text-sky-900 uppercase text-4xl tracking-tighter font-light mb-10'>
         Skills

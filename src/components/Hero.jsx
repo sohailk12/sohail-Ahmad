@@ -13,12 +13,12 @@ const container =(delay)=>({
   } 
 })
 export const Hero = () => {
-  return <section className='border-b-2 border-solid border-slate-200 ml-5 md:ml-56 mr-5 flex flex-wrap flex-col lg:mb-35 pb-20 pt-4' id='about'>
+  return <section className='border-b-2 border-solid border-slate-200 ml-5 lg:ml-56 mr-5 flex flex-wrap flex-col lg:mb-35 pb-20 pt-4' id='about'>
     <motion.div 
     whileInView={{opacity:1, y:0}}
     initial={{opacity:0, y:-50}}
     transition={{duration:1,delay:0}}
-    className='hidden md:flex justify-end mb-20 py-2'>
+    className='hidden lg:flex justify-end mb-20 py-2'>
       <ul className='flex gap-5 pr-5'>
         <li><a href='https://drive.google.com/file/d/1GYTzpU50sEsFvVxRKDR9uabXLDZZAaHr/view?usp=drive_link' target='_blank' className='text-blue-900 font-light text-xl tracking-tight hover:text-violet-600'>Resume</a></li>
         <li><a href='mailto:sa492284@gmail.com' className='border-2 border-violet-600 text-violet-600 text-xl shadow-xl tracking-tighter py-2 px-4 rounded-3xl hover:bg-violet-600 hover:text-white'>Say Hello</a></li>
