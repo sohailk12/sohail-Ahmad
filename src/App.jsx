@@ -7,7 +7,7 @@ import Certifications from './components/Certifications'
 import { Navbar } from './components/Navbar'
 
 const App = () =>{
-  return <div className='overflow-x-hidden'>
+  return <div className='overflow-x-hidden md:overflow-x-auto h-screen'>
       <Navbar />
       <Hero />
       <Experience/>
