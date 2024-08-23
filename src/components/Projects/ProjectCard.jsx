@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { FaExternalLinkSquareAlt } from "react-icons/fa";
-import styles from './ProjectCard.module.css'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 export const ProjectCard = ({project :{title,imageSrc ,description,skills,demo,source}}) => {
   const [toggleImage, setToggleImage] = useState(false);
   console.log(toggleImage)
@@ -12,12 +10,6 @@ export const ProjectCard = ({project :{title,imageSrc ,description,skills,demo,s
     transition={{duration:0.8}}
     className={`${toggleImage ? 'bg-slate-900': 'opacity-100'} flex flex-col items-center justify-center w-5/6 lg:w-1/4 mb-7 lg:shadow-2xl hover:cursor-pointer group`}
     onClick={()=>setToggleImage(!toggleImage)} onMouseEnter={()=>setToggleImage(!toggleImage)} onMouseLeave={()=>setToggleImage(false)}>
-    {/* <motion.div 
-    whileHover={{scale:1.1}}
-    className='flex mx-auto gap-1'>
-    <p className='text-sky-600 font-thin tracking-tight group-hover:text-blue-950 group-hover:transition-all'>Open link</p>
-    <FaExternalLinkSquareAlt className='mt-1 text-sky-800'/>
-    </motion.div> */}
     <img
     className={`${toggleImage ? 'opacity-10': 'opacity-100'} w-fit md:w-auto`} src={imageSrc} alt={`Image of ${title}`} />
     <div className='absolute gap-9 justify-center items-center mb-4 w-3/5 lg:w-1/5 pt-5'>

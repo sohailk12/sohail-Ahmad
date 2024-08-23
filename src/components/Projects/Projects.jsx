@@ -1,6 +1,5 @@
 import React from 'react'
 import {ProjectData} from '../../data/data'
-import styles from './projects.module.css'
 import { ProjectCard } from './ProjectCard'
 import { motion } from 'framer-motion'
 export const Projects = () => {
