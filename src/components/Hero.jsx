@@ -30,7 +30,7 @@ export const Hero = () => {
         variants={container(0.2)}
         initial="hidden"
         animate="visible"
-        className='text-6xl text-sky-900 font-extralight tracking-tighter pb-14 pt-10 ml-10'>Sohail Ahmad</motion.h1>
+        className='text-6xl text-sky-900 font-extralight tracking-tighter pt-10 ml-10'>Sohail Ahmad</motion.h1>
         <motion.span 
         variants={container(0.5)}
         initial="hidden"
