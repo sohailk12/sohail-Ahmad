@@ -1,0 +1,5 @@
+@import "./variables.css";
+.App{
+    background-color: var(--bg-color);
+    padding-top: 61px;
+}
