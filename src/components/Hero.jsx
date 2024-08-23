@@ -4,7 +4,6 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io5";
 import { motion } from "framer-motion";
 import ProfilePic from '../assets/profile.png';
-import CV from '../data/CV.pdf'
 const container =(delay)=>({
   hidden: {x: -200, opacity:0},
   visible: {
