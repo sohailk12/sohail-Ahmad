@@ -1,6 +1,6 @@
 import RWD from '../assets/certifications/RWD.png'
 import JADS from '../assets/certifications/JADS.png'
-import project1 from '../assets/projects/taskwizard3.png';
+import project1 from '../assets/projects/taskwizard.png';
 export const certificationData = [
     {
         "title": "Responsive Web Design",
