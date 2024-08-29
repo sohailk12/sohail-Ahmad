@@ -1,5 +1,6 @@
 import RWD from '../assets/certifications/RWD.png'
 import JADS from '../assets/certifications/JADS.png'
+import project1 from '../assets/projects/taskwizard3.png';
 export const certificationData = [
     {
         "title": "Responsive Web Design",
@@ -16,12 +17,12 @@ export const certificationData = [
 
 export const ProjectData = [
     {
-      "title": "Tribute Page",
-      "imageSrc": "https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg",
-      "description": "This is a project made to learn the latest languages by building an app.",
-      "skills": ["React", "Express", "Node"],
-      "demo": "https://www.example.com",
-      "source": "https://www.github.com"
+      "title": "TaskWizard App",
+      "imageSrc": project1,
+      "description": "This app can add daily routine tasks. We can update and delete the current task as well it is made on the front-end side.",
+      "skills": ["React", "Chakra-UI", "Html","Css","JavaScript"],
+      "demo": "https://taskwizard-tw.vercel.app/",
+      "source": "https://github.com/sohailk12/TaskWizard"
     },
     {
       "title": "Random Quote Machine",

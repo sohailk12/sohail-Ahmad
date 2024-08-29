@@ -10,7 +10,7 @@ export const Projects = () => {
     transition={{duration:0.5, delay:0}} 
     className='text-center text-sky-900 uppercase text-4xl tracking-tighter font-light'>Projects
     </motion.h2>
-    <div className='flex flex-wrap justify-start items-start gap-4 gap-y-10 md:gap-y-20 sm:gap-x-20 mt-9 p-10'>
+    <div className='flex flex-wrap justify-start items-start gap-4 gap-y-10 md:gap-y-16 sm:gap-x-20 mt-9 p-10 pt-0'>
         {
             ProjectData.map((project,id)=>{
                 return <ProjectCard key={id} project={project}/>
