@@ -2,10 +2,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { FaHtml5,FaCss3Alt,FaReact,FaBootstrap,FaGitAlt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiVite } from "react-icons/si";
+import { SiVite,SiMui,SiReactrouter  } from "react-icons/si";
 import { BiLogoJquery } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoGithub } from "react-icons/io";
+
 const iconVariants=(duration)=>({
     initial: {y:-10},
     animate: {
@@ -86,7 +87,7 @@ export const Experience = () => {
             initial="initial"
             animate="animate"
             className='rounded-2xl border-4 border-sky-300 p-4 shadow-xl'>
-                <SiVite    className='text-7xl text-yellow-600'/>
+                <SiMui className='text-7xl text-blue-600'/>
             </motion.div>
             <motion.div 
             variants={iconVariants(3.5)}
@@ -94,6 +95,20 @@ export const Experience = () => {
             animate="animate"
             className='rounded-2xl border-4 border-sky-300 p-4 shadow-xl'>
                 <RiTailwindCssFill className='text-7xl text-sky-400'/>
+            </motion.div>
+            <motion.div 
+            variants={iconVariants(2)}
+            initial="initial"
+            animate="animate"
+            className='rounded-2xl border-4 border-sky-300 p-4 shadow-xl'>
+                <SiReactrouter  className='text-7xl text-black'/>
+            </motion.div>
+            <motion.div 
+            variants={iconVariants(2)}
+            initial="initial"
+            animate="animate"
+            className='rounded-2xl border-4 border-sky-300 p-4 shadow-xl'>
+                <SiVite    className='text-7xl text-yellow-600'/>
             </motion.div>
             <motion.div 
             variants={iconVariants(2.5)}

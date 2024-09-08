@@ -3,6 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from 'framer-motion';
 import {sections} from '../data/data';
+import { SiReaddotcv } from "react-icons/si";
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -31,11 +32,13 @@ useEffect(()=>{
   initial={{opacity:0, y:-50}}
   transition={{duration:0.8,delay:0}}
   className='w-11/12 lg:w-56 pt-6 lg:bg-gradient-to-r from-purple-200 via-indigo-100 to-sky-200 lg:block left-5 lg:left-0 right-5 lg:right-0 relative lg:h-screen lg:fixed top-0 lg:px-1'>
-    <div className='flex lg:hidden justify-between'>
+    <div className='flex lg:hidden  justify-between'>
     <div className='text-violet-600 font-bold text-4xl tracking-tight lg:hidden block hover:text-sky-700 cursor-pointer'>
       <a href='/'>SA</a>
     </div>
     <div className="flex">
+    <div className='text-lg pt-1 text-blue-900 mr-1'><SiReaddotcv /></div>
+    <a href='https://drive.google.com/file/d/1GYTzpU50sEsFvVxRKDR9uabXLDZZAaHr/view?usp=drive_link' target='_blank' className='text-blue-900 font-light mr-7 text-xl tracking-tight hover:text-violet-600'>Resume</a>
       {
         menuOpen ?<AiOutlineClose  className='text-sky-900 lg:hidden text-3xl cursor-pointer hover:text-cyan-950' alt="menu button" onClick={MenuVisibilty}/> :
         <GiHamburgerMenu className='text-sky-900 lg:hidden text-3xl cursor-pointer hover:text-cyan-950' alt="menu button" onClick={MenuVisibilty}/>

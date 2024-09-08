@@ -1,6 +1,7 @@
 import RWD from '../assets/certifications/RWD.png'
 import JADS from '../assets/certifications/JADS.png'
-import project1 from '../assets/projects/taskwizard.png';
+import project1 from '../assets/projects/gitdiscover.png';
+import project2 from '../assets/projects/taskwizard.png';
 export const certificationData = [
     {
         "title": "Responsive Web Design",
@@ -17,20 +18,20 @@ export const certificationData = [
 
 export const ProjectData = [
     {
-      "title": "TaskWizard App",
+      "title": "GitDiscover",
       "imageSrc": project1,
-      "description": "This app can add daily routine tasks. We can update and delete the current task as well it is made on the front-end side.",
-      "skills": ["React", "Chakra-UI", "Html","Css","JavaScript"],
-      "demo": "https://taskwizard-tw.vercel.app/",
-      "source": "https://github.com/sohailk12/TaskWizard"
+      "description": "This app is build to explore GitHub Repositories and GitHub Users information. Using code splitting and dynamic routing. The Loading speed of this app is optimized and faster.",
+      "skills": ["React", "Material-UI", "React-Router","JavaScript","html","css"],
+      "demo": "https://gitdiscover.netlify.app/",
+      "source": "https://github.com/sohailk12/gitdiscover"
     },
     {
-      "title": "Random Quote Machine",
-      "imageSrc": "https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png",
-      "description": "This is a project made to learn the latest languages by building an app.",
-      "skills": ["React", "Express", "Node", "Sass"],
-      "demo": "https://www.example.com",
-      "source": "https://www.github.com"
+      "title": "TaskWizard App",
+      "imageSrc": project2,
+      "description": "In this app we can add daily routine tasks. We can also update and delete the task as well, it is made on the front-end side for testing DOM manipulation.",
+      "skills": ["React", "Chakra-UI", "JavaScript", "html","css"],
+      "demo": "https://taskwizard-tw.vercel.app/",
+      "source": "https://github.com/sohailk12/TaskWizard"
     },
     {
       "title": "Map Data Across the Globe",
