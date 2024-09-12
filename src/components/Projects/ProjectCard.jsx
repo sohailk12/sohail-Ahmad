@@ -28,7 +28,7 @@ export const ProjectCard = ({project :{title,imageSrc ,description,skills,demo,s
     whileTap={{ scale: 0.8}}
     initial={{opacity:0, x:-50,y:50}}
     transition={{duration:0.3}}
-    href={demo} target='_blank' className={`${toggleImage ? 'block': 'hidden'} bg-violet-600 text-xl font-medium tracking-tight text-white px-2 py-1 rounded-full`}>Demo
+    href={demo} target='_blank' className={`${toggleImage ? 'block': 'hidden'} bg-violet-600 text-xl font-medium tracking-tight text-white px-2 py-1 rounded-full`}>Visit
     </motion.a>
     </div>
     </div>
