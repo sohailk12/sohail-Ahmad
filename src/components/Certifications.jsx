@@ -4,7 +4,7 @@ import {certificationData} from '../data/data';
 import { MdVerified } from "react-icons/md";
 import { IoIosRibbon } from "react-icons/io";
 const Certifications = () => {
-  return <section className='border-b-2 border-solid border-slate-200 ml-5 lg:ml-56 mr-5 flex flex-col flex-wrap lg:mb-35 pt-5 md:pt-20 pb-10 md:pb-20' id='certifications'>
+  return <section className='border-b-2 border-solid border-slate-200 ml-5 md:ml-56 mr-5 flex flex-col flex-wrap lg:mb-35 pt-5 md:pt-20 pb-10 md:pb-20' id='certifications'>
   <motion.h2
   whileInView={{opacity:1,y:0}}
   initial={{opacity:-1,y:-50}}

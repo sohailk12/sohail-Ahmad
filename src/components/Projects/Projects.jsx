@@ -3,7 +3,7 @@ import {ProjectData} from '../../data/data'
 import { ProjectCard } from './ProjectCard'
 import { motion } from 'framer-motion'
 export const Projects = () => {
-  return <section className='border-b-2 border-solid border-slate-200 ml-5 lg:ml-56 mr-5 flex flex-col flex-wrap lg:mb-35 pb-20 pt-5 md:pt-14' id='projects'>
+  return <section className='border-b-2 border-solid border-slate-200 ml-5 md:ml-56 mr-5 flex flex-col flex-wrap lg:mb-35 pb-20 pt-5 md:pt-14' id='projects'>
     <motion.h2
     whileInView={{y:0,opacity:1 }}
     initial={{y:-50,opacity:0}}
