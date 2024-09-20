@@ -39,13 +39,13 @@ export const Hero = () => {
         variants={container(0.5)}
         initial="hidden"
         animate="visible"
-        className='bg-gradient-to-r from-teal-900 via-sky-500 to-violet-700 bg-clip-text pl-7 text-4xl tracking-tight text-transparent font-light'>Front-end-developer
+        className='bg-gradient-to-r from-teal-900 via-sky-500 to-violet-700 bg-clip-text pl-7 text-4xl tracking-tight text-transparent font-light'>MERN Developer
         </motion.span>
         <motion.p 
         variants={container(1)}
         initial="hidden"
         animate="visible"
-        className='lg:py-6 text-sky-700 tracking-tight font-light text-lg md:px-3 text-center'>a Front-end Web Developer with a one year of experience using react js. Reach out if you like to learn more!
+        className='lg:py-6 text-sky-700 tracking-tight font-light text-lg md:px-3 text-center'>MERN Stack Developer with one year of hands-on experience in building dynamic and responsive web applications using MongoDB, Express.js, React.js, and Node.js. Passionate about creating user-friendly, performant solutions, and always eager to learn and implement the latest technologies. Reach out if you'd like to learn more!
         </motion.p>
         <motion.div 
         variants={container(1.5)}

@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaHtml5,FaCss3Alt,FaReact,FaBootstrap,FaGitAlt } from "react-icons/fa";
+import { FaHtml5,FaCss3Alt,FaReact,FaBootstrap,FaGitAlt,FaNodeJs  } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiVite,SiMui,SiReactrouter  } from "react-icons/si";
+import { SiVite,SiMui,SiReactrouter,SiExpress,SiMongodb } from "react-icons/si";
 import { BiLogoJquery } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoGithub } from "react-icons/io";
@@ -66,10 +66,31 @@ export const Experience = () => {
             initial="initial"
             animate="animate"
             className='rounded-2xl border-4 border-sky-300 p-4 shadow-xl'>
+                <SiMongodb className='text-7xl text-green-600'/>
+            </motion.div>
+            <motion.div 
+            variants={iconVariants(5)}
+            initial="initial"
+            animate="animate"
+            className='rounded-2xl border-4 border-sky-300 p-4 shadow-xl'>
                 <FaReact   className='text-7xl text-sky-500'/>
             </motion.div>
             <motion.div 
-            variants={iconVariants(6)}
+            variants={iconVariants(2.5)}
+            initial="initial"
+            animate="animate"
+            className='rounded-2xl border-4 border-sky-300 p-4 shadow-xl'>
+                <SiExpress      className='text-7xl text-black'/>
+            </motion.div>
+            <motion.div 
+            variants={iconVariants(3.5)}
+            initial="initial"
+            animate="animate"
+            className='rounded-2xl border-4 border-sky-300 p-4 shadow-xl'>
+                <FaNodeJs  className='text-7xl text-lime-600'/>
+            </motion.div>
+            <motion.div 
+            variants={iconVariants(5)}
             initial="initial"
             animate="animate"
             className='rounded-2xl border-4 border-sky-300 p-4 shadow-xl'>
