@@ -1,4 +1,4 @@
-import React , {useState,useEffect} from 'react';
+import  {useState,useEffect} from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from 'framer-motion';
@@ -11,19 +11,24 @@ const MenuVisibilty=()=>{
     return setMenuOpen(!menuOpen)
   }
 const handleScroll =()=>{
-    const scrollPosition = window.scrollY + window.innerHeight/2;
+    const scrollContainer = document.querySelector('main');
+    if (!scrollContainer) return;
+    const scrollPosition = scrollContainer.scrollTop + scrollContainer.clientHeight / 2;
     sections.forEach(section=>{
         const element = document.getElementById(section.id);
-        if(element.offsetTop <= scrollPosition && element.offsetTop + element.offsetHeight > scrollPosition){
+        if(element && element.offsetTop <= scrollPosition && element.offsetTop + element.offsetHeight > scrollPosition){
             setActiveSection(section.id);
         }
     })
 }
 useEffect(()=>{
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return ()=>{
-        window.removeEventListener('scroll', handleScroll);
+    const scrollContainer = document.querySelector('main');
+    if (scrollContainer) {
+        scrollContainer.addEventListener('scroll', handleScroll);
+        handleScroll();
+        return ()=>{
+            scrollContainer.removeEventListener('scroll', handleScroll);
+        }
     }
 },[]);
   return <header>
@@ -31,7 +36,9 @@ useEffect(()=>{
   whileInView={{opacity:1, y:0}}
   initial={{opacity:0, y:-50}}
   transition={{duration:0.8,delay:0}}
-  className='w-11/12 md:w-56 pt-6 md:bg-gradient-to-r from-purple-200 via-indigo-100 to-sky-200 md:block left-5 md:left-0 right-5 md:right-0 relative md:h-screen md:fixed top-0 md:px-1'>
+  className='fixed w-11/12 md:w-56 pt-6 md:bg-gradient-to-r from-purple-200 via-indigo-100 to-sky-200 
+  left-5 md:left-0 right-5 md:right-0 md:h-screen 
+  top-0 md:px-1 z-50'>
     <div className='flex lg:hidden  justify-between'>
     <div className='text-violet-600 font-bold text-4xl tracking-tight md:hidden block hover:text-sky-700 cursor-pointer'>
       <a href='/'>SA</a>
@@ -49,7 +56,7 @@ useEffect(()=>{
     whileInView={{opacity:1, x:0}}
     initial={{opacity:0, x:-200}}
     transition={{duration:0.8,delay:0}}
-    className='hidden md:block text-2xl font-semibold'>
+    className='hidden md:block text-2xl font-semibold '>
     <motion.div
     whileInView={{opacity:1,x:0, y:0}}
     initial={{opacity:0,x:-50, y:-50}}
@@ -66,21 +73,21 @@ useEffect(()=>{
                         <a href={`#${section.id}`} className='text-xl uppercase'>
                         <span className={`${activeSection === section.id ? 'text-violet-800 ':'text-sky-900'} mt-1 font-medium opacity-85 tracking-tighter group-hover:text-violet-700`}>{section.label}</span>
                     </a>
-
                         </div>
                 </li>
             })
         }
     </ul>
     </motion.div>
-    <div className={`${menuOpen ? 'block': 'hidden'} lg:hidden flex pt-2`}>
+    <div className={`${menuOpen ? 'block': 'hidden'} lg:hidden flex pt-2 z-50 `}>
       <ul className='sm:flex text-2xl font-semibold flex-col w-full space-y-1 items-center' onClick={()=>setMenuOpen(false)}>
       {
             sections.map((section,id)=>{
-                return <li key={id} className='flex flex-row group border-2 border-sky-300 w-full items-center justify-center'>
+                return <li key={id} className='flex flex-row group border-2 rounded-lg border-sky-200 w-full items-center justify-center 
+                bg-gradient-to-b from-sky-100 via-white to-purple-100'>
                     <a href={`#${section.id}`} className='text-xl uppercase'>
                         <div className='flex py-2 pr-2 rounded-r-full'>
-                        <span className={`${activeSection === section.id ? 'text-violet-800 text-2xl':'text-sky-900'} mt-1 font-medium opacity-85 tracking-tighter group-hover:text-violet-700 group-hover:transition-all group-hover:text-2xl`}>{section.label}</span>
+                        <span className={`${activeSection === section.id ? 'text-violet-800 text-2xl':'text-sky-950'} mt-1 font-medium opacity-85 tracking-tighter group-hover:text-violet-700 group-hover:transition-all group-hover:text-2xl`}>{section.label}</span>
                         </div>
                     </a>
                 </li>

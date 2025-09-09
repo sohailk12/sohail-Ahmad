@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+
 export const ProjectCard = ({project :{title,imageSrc ,description,skills,demo,source}}) => {
   const [toggleImage, setToggleImage] = useState(false);
   console.log(toggleImage)
@@ -50,3 +52,14 @@ export const ProjectCard = ({project :{title,imageSrc ,description,skills,demo,s
     </motion.div>
 </div>
 }
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    imageSrc: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    skills: PropTypes.arrayOf(PropTypes.string).isRequired,
+    demo: PropTypes.string.isRequired,
+    source: PropTypes.string.isRequired,
+  }).isRequired,
+};

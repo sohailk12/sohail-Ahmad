@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from 'framer-motion'
 import { FaHtml5,FaCss3Alt,FaReact,FaBootstrap,FaGitAlt,FaNodeJs  } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -20,7 +19,8 @@ const iconVariants=(duration)=>({
     }
 })
 export const Experience = () => {
-  return <section className='border-b-2 border-solid border-slate-200 ml-5 md:ml-56 mr-5 flex flex-col flex-wrap lg:mb-35 pt-5 md:pt-28 pb-40' id='skills'> 
+  return <section className='border-b-2 border-solid border-slate-200 
+  ml-5 mr-5 flex flex-col flex-wrap lg:mb-35 pt-5 md:pt-28 pb-40' id='skills'> 
     <motion.h2
     whileInView={{opacity:1, y:0}}
     initial={{opacity:0, y:-50}}
@@ -32,7 +32,7 @@ export const Experience = () => {
     whileInView={{opacity:1, y:0}}
     initial={{opacity:0, y:50}}
     transition={{duration:0.5,delay:0}}
-    className='text-center text-sky-600 text-2xl tracking-tight'>Some of the tools and Technologies I've had used
+    className='text-center text-sky-600 text-2xl tracking-tight'>Some of the tools and Technologies I&apos;ve had used
     </motion.h2>
     <div className="flex flex-wrap items-center justify-center pt-5 sm:mx-auto">
         <motion.div 

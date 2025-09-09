@@ -1,11 +1,10 @@
-import React from 'react';
 import { FaLinkedin, FaGithub,FaInstagram  } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { IoLogoYoutube } from "react-icons/io5";
-import { delay, motion } from 'framer-motion';
+import {  motion } from 'framer-motion';
 
 export const Contact = () => {
-  return <section className='border-b-2 border-solid border-slate-200 ml-5 md:ml-56 mr-5 flex flex-col flex-wrap justify-center items-center lg:mb-35 pb-24 pt-32' id='contact'>
+  return <section className='border-b-2 border-solid border-slate-200 ml-5 mr-5 
+  flex flex-col flex-wrap justify-center items-center lg:mb-35 pb-24 pt-32' id='contact'>
     <div className='flex flex-col items-center justify-center'>
       <motion.h1
       whileInView={{x:0,opacity:1,rotate:360}}
@@ -29,8 +28,7 @@ export const Contact = () => {
         className='flex gap-5 text-4xl mx-auto mt-10'>
         <motion.div
         whileHover={{ scale: 1.3}}
-        onHoverStart={e => {}}
-        onHoverEnd={e => {}}
+        
         whileTap={{ scale: 0.8}}
         transition={{duration:0.2, delay:0}}
         >
@@ -46,8 +44,7 @@ export const Contact = () => {
         
         <motion.div
         whileHover={{ scale: 1.3}}
-        onHoverStart={e => {}}
-        onHoverEnd={e => {}}
+        
         whileTap={{ scale: 0.8}}
         transition={{duration:0.2, delay:0}}
         >
@@ -55,8 +52,7 @@ export const Contact = () => {
         </motion.div>
         <motion.div
         whileHover={{ scale: 1.3}}
-        onHoverStart={e => {}}
-        onHoverEnd={e => {}}
+        
         whileTap={{ scale: 0.8}}
         transition={{duration:0.2, delay:0}}
         >
