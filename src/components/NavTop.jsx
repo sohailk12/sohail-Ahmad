@@ -6,7 +6,7 @@ export const NavTop = () => {
     whileInView={{opacity:1, y:0}}
     initial={{opacity:0, y:-50}}
     transition={{duration:1,delay:0}}
-    className='hidden md:flex py-1 fixed top-0 left-56 w-10/12 z-50'>
+    className='hidden md:flex py-1 fixed top-0 left-56 w-9/12 z-50'>
       <ul className='flex gap-5 mr-10 ml-auto px-0 py-4'>
         <li className='flex gap-1'>
         <div className='text-lg pt-1 text-blue-900'><SiReaddotcv /></div>
