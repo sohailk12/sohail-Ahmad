@@ -5,11 +5,13 @@ import PropTypes from 'prop-types';
 export const ProjectCard = ({project :{title,imageSrc ,description,skills,demo,source}}) => {
   const [toggleImage, setToggleImage] = useState(false);
   console.log(toggleImage)
-  return <div className='flex flex-row flex-wrap items-center justify-center overflow-hidden gap-x-32 shadow-lg rounded-lg'>
-    <motion.div 
-    whileInView={{opacity:1, x:0}}
-    initial={{opacity:0, x:-100}}
-    transition={{duration:0.8}}
+  return <motion.div 
+  whileInView={{y:0, opacity:1}}
+                    initial={{y:100,opacity:0}}
+                    transition={{duration:1.5, delay:0}}
+  className='flex flex-row flex-wrap items-center justify-center overflow-hidden gap-x-32 shadow-lg rounded-lg'>
+    <div 
+    
     className={`${toggleImage ? 'bg-slate-900': 'opacity-100'} flex flex-col items-center justify-center w-5/6 lg:w-1/4 mt-6 mb-7 lg:shadow-2xl hover:cursor-pointer group`}
     onClick={()=>setToggleImage(!toggleImage)} onMouseEnter={()=>setToggleImage(!toggleImage)} onMouseLeave={()=>setToggleImage(false)}>
     <img
@@ -34,11 +36,8 @@ export const ProjectCard = ({project :{title,imageSrc ,description,skills,demo,s
     </motion.a>
     </div>
     </div>
-    </motion.div>
-    <motion.div 
-    whileInView={{opacity:1, x:0}}
-    initial={{opacity:0, x:100}}
-    transition={{duration:1}}
+    </div>
+    <div 
     className='flex flex-col w-5/6 lg:w-1/2 gap-y-0 p-2'>
     <h3 className='text-xl tracking-tight text-sky-900 mb-2 font-semibold'>{title}</h3>
   <p className='text-lg tracking-tight text-sky-600 mb-4'>{description}</p>
@@ -49,8 +48,8 @@ export const ProjectCard = ({project :{title,imageSrc ,description,skills,demo,s
           })
       }
   </ul>
-    </motion.div>
-</div>
+    </div>
+</motion.div>
 }
 
 ProjectCard.propTypes = {

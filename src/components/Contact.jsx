@@ -1,14 +1,51 @@
+import { useRef, useState } from 'react';
 import { FaLinkedin, FaGithub,FaInstagram  } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import {  motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState(null); // 'success' | 'error' | null
+
+  const handleChange = ({ target: { name, value } }) => {
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSending(true);
+    setStatus(null);
+    
+    try {
+      await emailjs.sendForm(
+        'service_itpqzu8', // Replace with your EmailJS service ID
+        'template_a09nqds',      // Replace with your EmailJS template ID
+        formRef.current,
+        'YOUR_PUBLIC_KEY'     // Replace with your EmailJS public key
+      );
+      setStatus('success');
+      setForm({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setStatus('error');
+    } finally {
+      setIsSending(false);
+    }
+  };
+
   return <section className='border-b-2 border-solid border-slate-200 ml-5 mr-5 
   flex flex-col flex-wrap justify-center items-center lg:mb-35 pb-24 pt-32' id='contact'>
     <div className='flex flex-col items-center justify-center'>
       <motion.h1
-      whileInView={{x:0,opacity:1,rotate:360}}
-      initial={{x:-200,opacity:0}}
+      whileInView={{y:0,opacity:1}}
+      initial={{y:100,opacity:0}}
       transition={{duration:0.6}}
       className='text-violet-700 font-bold text-6xl md:text-7xl lg:text-8xl tracking-tight mb-10'>SA</motion.h1>
       <motion.h2
@@ -21,6 +58,57 @@ export const Contact = () => {
       initial={{x:200,opacity:0}}
       transition={{duration:1.5}}
       className='w-1/3 tracking-tight text-right text-base text-sky-700'>Living, learning, & leveling up one day at a time.</motion.p>
+      
+      {/* Contact Form */}
+      <motion.div 
+        whileInView={{y:0,opacity:1}}
+        initial={{y:50,opacity:0}}
+        transition={{duration:0.8}}
+        className='mt-10 w-full max-w-md'
+      >
+        <form ref={formRef} onSubmit={handleSubmit} className='flex flex-col gap-4'>
+          <input
+            type='text'
+            name='name'
+            value={form.name}
+            onChange={handleChange}
+            placeholder='Your Name'
+            required
+            className='p-3 border-2 border-slate-200 rounded-lg focus:border-violet-500 focus:outline-none transition-colors'
+          />
+          <input
+            type='email'
+            name='email'
+            value={form.email}
+            onChange={handleChange}
+            placeholder='Your Email'
+            required
+            className='p-3 border-2 border-slate-200 rounded-lg focus:border-violet-500 focus:outline-none transition-colors'
+          />
+          <textarea
+            name='message'
+            value={form.message}
+            onChange={handleChange}
+            placeholder='Your Message'
+            required
+            rows={5}
+            className='p-3 border-2 border-slate-200 rounded-lg focus:border-violet-500 focus:outline-none transition-colors resize-none'
+          />
+          <button
+            type='submit'
+            disabled={isSending}
+            className='p-3 bg-violet-700 text-white font-bold rounded-lg hover:bg-violet-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
+          >
+            {isSending ? 'Sending...' : 'Send Message'}
+          </button>
+          {status === 'success' && (
+            <p className='text-green-600 text-center'>Message sent successfully!</p>
+          )}
+          {status === 'error' && (
+            <p className='text-red-600 text-center'>Failed to send message. Please try again.</p>
+          )}
+        </form>
+      </motion.div>
       <motion.div 
       whileInView={{y:0,opacity:1}}
       initial={{y:100,opacity:0}}

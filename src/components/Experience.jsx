@@ -36,8 +36,8 @@ export const Experience = () => {
     </motion.h2>
     <div className="flex flex-wrap items-center justify-center pt-5 sm:mx-auto">
         <motion.div 
-        whileInView={{opacity:1, x:0}}
-        initial={{opacity:0,x:-100}}
+        whileInView={{opacity:1, y:0}}
+        initial={{opacity:0,y:120}}
         transition={{duration:1.5}}
         className='flex flex-wrap gap-7 md:gap-4 md:gap-y-8 justify-center items-center mx-1 md:mx-10 lg:mx-32'>
             <motion.div 
